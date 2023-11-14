@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f7fb;
+}
+::selection{
+    color: #fff;
+    background-color: #000;
+}
+.contianer{
+    padding: 2rem 7rem;
+    border-radius: 14px;
+    background-color: #fff;
+}
+.result_images{
+    display: flex;
+    justify-content: center;
+    column-gap: 7rem;
+    margin: 20px;
+    padding: 20px;
+}
+.start .user_result{
+    transform-origin: left;
+    animation: userShake 0.7s ease 3;
+}
+@keyframes userShake {
+    50%{
+        transform: rotate(10deg);
+    }}
+
+.start .cpu_result{
+    transform-origin: right;
+    animation: cpuShake 0.7s ease 3;
+}
+
+@keyframes cpuShake {
+    50%{
+        transform: rotate(-10deg);
+    }}
+
+.result_images img{
+    width: 150px;
+    border-radius: 50%;
+
+}
+.user_result img{
+    transform: rotate(90deg);
+}
+.cpu_result img{
+    transform: rotate(-90deg);
+}
+.result{
+    text-align: center;
+    font-size: 2rem;
+    color: #de0d64;
+    margin-top: 1.5rem;
+}
+
+.option_image img{
+    width: 100px;
+    border-radius: 50%;
+}
+.option_images{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    justify-content: space-around;
+}
+.contianer.start .option_images{
+    pointer-events: none;
+}
+.option_image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.option_image:hover{
+    opacity: 1;
+}
+.option_image.active{
+    opacity: 1;
+}
+.option_image img{
+    pointer-events: none;
+}
+.option_image p{
+    color: #3477eb;
+    font-size: 1.235rem;
+    margin-top: 1rem;
+    pointer-events: none;
+}
+
+.score_board{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    font-size: 2rem;
+    color: #de9c0d;
+    margin: 1.5rem 0;
+    font-weight: 700;
+}
+.score_board span{
+    text-align: center;
+    margin: 30px;
+    max-height: 50px;
+    border-radius: 20%;
+
+}
+.user_score{
+    color:#7CB342
+}
+.cpu_score{
+    color:#E53935
+}
